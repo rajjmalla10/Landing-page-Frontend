@@ -1,0 +1,231 @@
+// Import variables from _variable.scss (assuming it's in the same directory)
+@import "_variable";
+
+// Global Styles
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 80vh 1fr; 
+}
+
+
+//NavBar section
+
+.navbar { 
+  grid-row: 1; 
+  display: flex;
+  padding-left: 9rem;
+  padding-right: 8rem;
+  border-bottom: 1px solid white;
+  position: relative;
+
+  .navbar__brand {
+    margin-top: 11px;
+  }
+  .navbar__nav {
+    position: relative; 
+    
+    
+  }
+
+  .navbar__nav ul {
+    display: inline-block; 
+    padding: 0; 
+    margin-left: 15px;
+    margin-right: 15px;
+    
+    
+  }
+
+
+  
+
+  .navbar__nav ul a {
+    display: inline-block; 
+    padding: 0; 
+    color: $color;
+    text-decoration: none;
+  }
+
+
+  li {
+    display: inline-block;
+    list-style-type: none; 
+    padding-top: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  a {
+    color: $color;
+    text-decoration: none;
+  }
+
+   i {
+    color: white; 
+    margin-left: 8px;
+    cursor: pointer;
+  }
+
+  .navbar__search {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+
+    i {
+      color: $color;
+      font-size: 1.2rem;
+    }
+
+    
+  }
+
+  .resources__dropdown {
+    display: none;
+    position: absolute;
+    top: calc(80% + 1px);
+    left: 75;
+    width: 440px;
+    height: 335px;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 100; 
+    border-radius: 8px;
+
+    
+
+    .content__blog, .content__Customer, .content__Video {
+      display: flex;
+      align-items: center;
+      padding-top: 10px;
+      padding-left: 45px;
+      justify-content: start; // Centers the content horizontally
+      height: 100px; // Ensures consistent height for all content blocks
+      box-sizing: border-box; // Ensures padding is included in the height
+      
+      
+
+      i {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #1D6FA3;
+         // Ensure the icon color is applied correctly
+
+         .fa-solid {
+          font-size: 15px;
+         }
+      }
+
+
+
+      .title {
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      .text {
+        margin: 0;
+        font-size: 14px;
+        color: #666;
+      }
+    }
+  }
+
+  li.dropdown:hover .resources__dropdown {
+    display: block;
+  }
+  
+
+  
+
+  
+  
+}
+
+
+// hero section
+.hero {
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 80vh; 
+
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; 
+
+    h1 {
+      margin: 0; 
+      font-size: 60px; 
+      color: white;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 30px 0 0 0; 
+      font-size: 20px;
+      color: white;
+    }
+
+    .hero-box {
+      display: flex;
+      margin-top: 40px; 
+      padding-top: 20px;
+     padding-bottom: 20px;
+    padding-left: 35px;
+     padding-right: 35px;
+    border: 2px solid #FFE500; 
+    border-radius: 8px;
+    cursor: pointer;
+
+      h2 {
+        margin: 0;
+        font-size: 18px; 
+        color: white;
+        padding-top: 5px;
+        padding-left: 2px;
+      }
+
+      i{
+        color: white;
+        padding-left: 10px;
+        font-size: 1.5rem;
+        padding-top: 5px;
+      }
+    }
+  }
+}
+
+
+
+.container {
+  position: relative; 
+  height: 95vh; 
+}
+
+.bg-section {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  z-index: -1;
+  
+  background-image: linear-gradient(rgba(0, 41, 83, 0.8), rgba(0, 45, 91, 0.8)), 
+                    url("/yipl-frontend-challenge/landing-page/images/hero-Section.jpeg");
+  background-size: cover;
+  background-position: center;
+}
