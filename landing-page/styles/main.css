@@ -8,13 +8,15 @@ html, body {
 
 body {
   display: grid;
-  grid-template-rows: 80vh 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .navbar {
   grid-row: 1;
   display: flex;
-  padding-left: 9rem;
+  padding-left: 8rem;
   padding-right: 8rem;
   border-bottom: 1px solid white;
   position: relative;
@@ -53,15 +55,11 @@ body {
   margin-left: 8px;
   cursor: pointer;
 }
-.navbar .navbar__search {
+.navbar .navbar__navsearch {
   margin-left: auto;
   display: flex;
   align-items: center;
   cursor: pointer;
-}
-.navbar .navbar__search i {
-  color: white;
-  font-size: 1.2rem;
 }
 .navbar .resources__dropdown {
   display: none;
@@ -103,6 +101,63 @@ body {
 }
 .navbar li.dropdown:hover .resources__dropdown {
   display: block;
+}
+.navbar .navbar__search {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 43%;
+  z-index: 999;
+}
+.navbar .navbar__search .search-dialog {
+  position: relative;
+}
+.navbar .navbar__search .search-dialog .search-form {
+  position: relative;
+}
+.navbar .navbar__search .search-dialog .search-form .search-input {
+  width: calc(100% - 10px);
+  height: 56px;
+  border-radius: 16px;
+  padding-right: 10px;
+  padding-left: 50px;
+  display: none;
+}
+.navbar .navbar__search .search-dialog .search-form .search-input::-moz-placeholder {
+  padding-top: 5px;
+  font-size: 16px;
+  color: #62696F;
+}
+.navbar .navbar__search .search-dialog .search-form .search-input::placeholder {
+  padding-top: 5px;
+  font-size: 16px;
+  color: #62696F;
+}
+.navbar .navbar__search .search-dialog .search-form .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #555;
+  display: none;
+}
+.navbar .navbar__search .search-dialog .search-form .close-button {
+  position: absolute;
+  top: -20%;
+  cursor: pointer;
+  background: none;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+  padding: 1px;
+  color: #585858;
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero {
@@ -159,6 +214,7 @@ body {
 .container {
   position: relative;
   height: 95vh;
+  width: 100%;
 }
 
 .bg-section {
@@ -171,4 +227,257 @@ body {
   background-image: linear-gradient(rgba(0, 41, 83, 0.8), rgba(0, 45, 91, 0.8)), url("/yipl-frontend-challenge/landing-page/images/hero-Section.jpeg");
   background-size: cover;
   background-position: center;
+}
+
+.campaigns {
+  position: relative;
+  background-color: #F9F9FF;
+  padding: 66px 0 96px;
+  width: 100%;
+}
+.campaigns .container__main {
+  text-align: center;
+}
+.campaigns .container__main h3 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #24272E;
+}
+.campaigns .container__main p {
+  margin-bottom: 48px;
+  color: #667085;
+  line-height: 30px;
+}
+.campaigns .campaign__all {
+  display: flex;
+  gap: 45px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.campaigns .campaign {
+  flex: 1 1 30%;
+  max-width: 352px;
+  height: 596px;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: white;
+}
+.campaigns .campaign .campaign-image {
+  width: 100%;
+  height: 352px;
+  margin: 0;
+  padding: 0;
+}
+.campaigns .campaign .campaign-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.campaigns .campaign .campaign-content {
+  padding-top: 20px;
+  width: 100%;
+}
+.campaigns .campaign .campaign-content h3 {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 30px;
+  font-size: 18px;
+  color: #24272E;
+  font-weight: 600;
+}
+.campaigns .campaign .campaign-content p {
+  padding: 0 30px;
+  font-size: 14px;
+  color: #7C7D82;
+  line-height: 21px;
+}
+.campaigns .campaign .campaign-content button {
+  background-color: white;
+  border: none;
+  padding: 10px 30px 0;
+  font-size: 16px;
+  color: #1D6FA3;
+  font-weight: bold;
+  cursor: pointer;
+}
+.campaigns .campaign .campaign-content button:hover {
+  color: #3990c7;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+}
+.footer .footer__top {
+  flex: 0 0 80%;
+  position: relative;
+  display: flex;
+}
+.footer .footer__top .bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 41, 83, 0.8), rgba(0, 45, 91, 0.8)), url("/yipl-frontend-challenge/landing-page/images/footer.jpeg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+.footer .footer__top .footer__logo {
+  position: relative;
+  z-index: 2;
+  padding-left: 12%;
+  padding-top: 8%;
+  padding-bottom: 6%;
+}
+.footer .footer__top .footer__logo img {
+  position: relative;
+  width: 250px;
+  height: 65px;
+  z-index: 3;
+}
+.footer .footer__top .footer__logo p {
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+}
+.footer .footer__top .footer__logo .footer__social ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  padding-top: 5px;
+}
+.footer .footer__top .footer__logo .footer__social i {
+  color: #3A3D43;
+  font-size: 16px;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: white;
+}
+.footer .footer__top .footer__links {
+  position: relative;
+  z-index: 2;
+  padding-top: 7%;
+  padding-bottom: 6%;
+  padding-left: 28%;
+}
+.footer .footer__top .footer__links h3 {
+  color: white;
+  font-size: medium;
+  font-weight: 500;
+}
+.footer .footer__top .footer__links ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0px;
+}
+.footer .footer__top .footer__links ul li {
+  padding-top: 10px;
+}
+.footer .footer__top .footer__links ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+}
+.footer .footer__top .footer__Resources {
+  position: relative;
+  z-index: 2;
+  padding-top: 7%;
+  padding-bottom: 6%;
+  padding-left: 7%;
+}
+.footer .footer__top .footer__Resources h3 {
+  color: white;
+  font-size: medium;
+  font-weight: 500;
+}
+.footer .footer__top .footer__Resources ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0px;
+}
+.footer .footer__top .footer__Resources ul li {
+  padding-top: 10px;
+}
+.footer .footer__top .footer__Resources ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+}
+.footer .footer__top .footer__Work {
+  position: relative;
+  z-index: 2;
+  padding-top: 7%;
+  padding-bottom: 6%;
+  padding-left: 7%;
+}
+.footer .footer__top .footer__Work h3 {
+  color: white;
+  font-size: medium;
+  font-weight: 500;
+}
+.footer .footer__top .footer__Work ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0px;
+}
+.footer .footer__top .footer__Work ul li {
+  padding-top: 10px;
+}
+.footer .footer__top .footer__Work ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+}
+.footer .footer__bottom {
+  flex: 0 0 20%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+.footer .footer__bottom span {
+  color: #7C7D82;
+  margin-left: 12%;
+  font-size: 14px;
+  cursor: pointer;
+}
+.footer .footer__bottom .footer__blogo {
+  display: flex;
+  align-items: center;
+}
+.footer .footer__bottom .footer__blogo img {
+  width: 120px;
+  height: 55px;
+  margin-right: 90px;
+}
+.footer .footer__bottom .footer__blogo i {
+  color: #7C7D82;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: white;
+  font-size: 20px;
+  margin-right: 30px;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.footer .footer__bottom .footer__blogo i:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }/*# sourceMappingURL=main.css.map */

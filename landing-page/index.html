@@ -4,24 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catalog</title>
-  <link rel="stylesheet" href="./styles/main.css"> 
+  <link rel="stylesheet" href="./styles/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <main class="container"> 
+  
+  <!-- Header section including navbar and hero section -->
+  <header class="container"> 
     <section class="bg-section"></section>
-    <header class="navbar">
+    <main class="navbar">
       <div class="navbar__brand">
         <img src="/yipl-frontend-challenge/landing-page/images/Logo1.png" height="55px" width="160px" alt="company logo">
       </div>
+
+      <!-- Navbar contents  -->
       <nav class="navbar__nav">
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="#Home">Home</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Case Studies</a></li>
           <li class="dropdown">
             <a href="#" class="resources-dropdown-toggle">Resources</a>
             <i class="fa-solid fa-chevron-down"></i>
+
+            <!-- Resources Dropdown -->
             <div class="resources__dropdown">
               <div class="content__blog">
                 <i class="fa-solid fa-book"></i>
@@ -45,14 +51,31 @@
                 </div>
               </div>
             </div>
+            <!-- --------- -->
+
           </li>
         </ul>
       </nav>
+      
+      <!-- navbar search icon -->
+      <div class="navbar__navsearch">
+        <i class="fas fa-search search-icon"></i>
+      </div>       
+      
+      <!-- when user click on search icon -->
       <div class="navbar__search">
-        <i class="fas fa-search"></i>
+        <div class="search-dialog">
+          <form class="search-form" action="#" method="get">
+            <i class="fas fa-search search-icon"></i>
+            <input type="search" class="search-input" placeholder="Search">
+            <button type="button" class="close-button">&times;</button>
+          </form>
+        </div>
       </div>
-    </header>
+      
+    </main>
   
+    <!-- hero sectioon -->
     <section class="hero">
       <div class="hero-content">
         <h1>Beautiful analytics to grow smarter</h1>
@@ -63,6 +86,127 @@
         </div>
       </div>
     </section>
-  </main>
+  </header>
+
+  <!-- Campaigns section -->
+<section class="campaigns">
+  <div class="container__main">
+    <h3>Campaigns</h3>
+    <p>We aim to stop public funds siphoning off and we have a plan that will help. We <br> are working at the national and EU levels to advance.</p>
+  </div>
+  <div class="campaign__all">
+    <article class="campaign">
+      <figure class="campaign-image">
+        <img src="/yipl-frontend-challenge/landing-page/images/campaign1.jpeg" alt="crowd" height="352px" width="351.44px">
+      </figure>
+      <div class="campaign-content">
+        <h3>Open Data Directive</h3>
+        <p>In view of Russia’s military action against the Ukrainian people, being concerned about ensuring that European funds In view of Russia’s military action against the Ukrainian people, </p>
+        <button class="learn-more-btn">
+          Learn More
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </article>
+
+    <article class="campaign">
+      <figure class="campaign-image">
+        <img src="/yipl-frontend-challenge/landing-page/images/campaign2.jpeg" alt="crowd" height="352px" width="351.44px">
+      </figure>
+      <div class="campaign-content">
+        <h3>Beneficial Ownership</h3>
+        <p>In view of Russia’s military action against the Ukrainian people, being concerned about ensuring that European funds In view of Russia’s military action against the Ukrainian people, </p>
+        <button class="learn-more-btn">
+          Learn More
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </article>
+
+    <article class="campaign">
+      <figure class="campaign-image">
+        <img src="/yipl-frontend-challenge/landing-page/images/campaign3.jpeg" alt="crowd" height="352px" width="351.44px">
+      </figure>
+      <div class="campaign-content">
+        <h3>EU Recovery Transparency</h3>
+        <p>In view of Russia’s military action against the Ukrainian people, being concerned about ensuring that European funds In view of Russia’s military action against the Ukrainian people, </p>
+        <button class="learn-more-btn">
+          Learn More
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+  <!-- footer section -->
+  <footer class="footer">
+    <section class="footer__top">
+      <span class="bg-image"></span>
+      <div class="footer__logo" >
+        <img src="/yipl-frontend-challenge/landing-page/images/Logo1.png" height="55px" width="160px" alt="company logo">
+        <p>We are a collaboration of non-government <br> organisation and professionals working to <br> ensure that government spending.</p>
+
+        <div class="footer__social">
+          <ul>
+            <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+          </ul>
+        </div>
+
+      </div> 
+
+      <nav class="footer__links">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#rampaigns">Campaigns</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about Us">About Us</a></li>
+
+        </ul>
+      </nav>
+
+      <nav class="footer__Resources">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+
+        </ul>
+      </nav>
+
+      <nav class="footer__Work">
+        <h3>Work with Us</h3>
+        <ul>
+          <li><a href="#home">Contact Us</a></li>
+          <li><a href="#about-us">Join Us</a></li>
+          
+
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Bottom section of footer -->
+    <section class="footer__bottom">
+      <span>Terms and Conditions</span>
+      <div class="footer__blogo">
+        <img src="/yipl-frontend-challenge/landing-page/images/lowerFooter.jpeg" height="55px" width="200px" alt="company logo">
+        
+        <i class="fa-solid fa-arrow-up"></i>
+      </div>
+    </section>
+ </footer>
 </body>
 </html>
