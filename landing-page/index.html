@@ -63,15 +63,7 @@
       </div>       
       
       <!-- when user click on search icon -->
-      <div class="navbar__search">
-        <div class="search-dialog">
-          <form class="search-form" action="#" method="get">
-            <i class="fas fa-search search-icon"></i>
-            <input type="search" class="search-input" placeholder="Search">
-            <button type="button" class="close-button">&times;</button>
-          </form>
-        </div>
-      </div>
+     
       
     </main>
   
@@ -80,13 +72,23 @@
       <div class="hero-content">
         <h1>Beautiful analytics to grow smarter</h1>
         <p>Powerful, self-serve product and growth analytics to help you convert, engage,<br> and retain more users. Trusted by over 4,000 startups.</p>
-        <div class="hero-box">
+        <button class="hero-box">
           <h2>Why Catalog?</h2>
           <i class="fa-solid fa-arrow-right"></i>
-        </div>
+        </button>
       </div>
     </section>
   </header>
+
+  <div class="navbar__search">
+    <div class="search-dialog">
+      <form class="search-form" action="#" method="get">
+        <i class="fas fa-search search-icon"></i>
+        <input type="search" class="search-input" placeholder="Search">
+        <button class="close-button" type="button" class="close-button">&times;</button>
+      </form>
+    </div>
+  </div>
 
   <!-- Campaigns section -->
 <section class="campaigns">
@@ -188,12 +190,76 @@
 
 <!-- Carousel -->
 <section class="carousel">
+    <div class="carousel-container">
+      <div class="carousel-container__prev" >
+        <button onclick="prev()">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+      </div>
+      <div class="carousel-container__slider">
+        <ul id="slider">
+          <li>
+            <figure class="carousel-logo">
+              <img src="/yipl-frontend-challenge/landing-page/images/layer.jpeg" alt="Logo">
+              <figcaption>Layers</figcaption>
+            </figure>
+          </li>
 
+          <li>
+            <figure class="carousel-logo">
+              <img src="/yipl-frontend-challenge/landing-page/images/Screenshot_14-6-2024_174041_www.figma.com.jpeg" alt="Logo">
+              <figcaption>Quotient</figcaption>
+            </figure>
+          </li>
+
+          <li>
+            <figure class="carousel-logo">
+              <img src="/yipl-frontend-challenge/landing-page/images/sisyphus.jpeg" alt="Logo">
+              <figcaption>Sisyphus</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="carousel-logo">
+              <img src="/yipl-frontend-challenge/landing-page/images/hourglass.jpeg" alt="Logo">
+              <figcaption>Hourglass</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="carousel-logo">
+              <img src="/yipl-frontend-challenge/landing-page/images/circooles.jpeg" alt="Logo">
+              <figcaption>Circooles</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="carousel-logo">
+              <img src="/yipl-frontend-challenge/landing-page/images/circooles.jpeg" alt="Logo">
+              <figcaption>Circooles</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="carousel-logo">
+              <img src="/yipl-frontend-challenge/landing-page/images/sisyphus.jpeg" alt="Logo">
+              <figcaption>Sisyphus</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="carousel-logo">
+              <img src="/yipl-frontend-challenge/landing-page/images/Screenshot_14-6-2024_174041_www.figma.com.jpeg" alt="Logo">
+              <figcaption>Quotient</figcaption>
+            </figure>
+          </li>
+          
+        </ul>
+      </div>
+      <div class="carousel-container__next">
+        <button onclick="next()">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
 </section>
 
 <!-- News Section -->
-
-
 <section class="news-container">
   <div class="news__heading">
     <span >
@@ -208,8 +274,119 @@
  
 </section>
 
+
+<!-- Latest Resources -->
+<section class="latest-resources">
+  <div class="latest-heading">
+    <h3>Latest Resources</h3>  <p>The latest resources include Transparency Toolkit,<br> Evidence, and Best Practices.</p>
+  
+  <div class="latest-resources__item">
+
+<!-- Card component one -->
+    <a href="#" class="latest-resources__card">
+      <div class="icon-and-title">
+        <span class="icon-one">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#A276FF" class="bi bi-wrench" viewBox="0 0 16 16">
+            <path d="M.102 2.223A3.004 3.004 0 0 0 3.78 5.897l6.341 6.252A3.003 3.003 0 0 0 13 16a3 3 0 1 0-.851-5.878L5.897 3.781A3.004 3.004 0 0 0 2.223.1l2.141 2.142L4 4l-1.757.364zm13.37 9.019.528.026.287.445.445.287.026.529L15 13l-.242.471-.026.529-.445.287-.287.445-.529.026L13 15l-.471-.242-.529-.026-.287-.445-.445-.287-.026-.529L11 13l.242-.471.026-.529.445-.287.287-.445.529-.026L13 11z"/>
+          </svg> 
+           </span>
+           <h4>Title</h4>
+          </div>
+      <div class="latest-resources__content">
+        <h3>Defence Elvis</h3>  <p>It allows creating networks of public spending on goods services used in defense in 28 EU countries...</p>  <button class="learn-more-btn">Learn more<i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </a>
+
+  <!-- Card component two -->
+
+    <a href="#" class="latest-resources__card">
+        <div class="icon-and-title">
+        <span class="icon-two">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#7291FF" class="bi bi-file-earmark-richtext" viewBox="0 0 16 16">
+            <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"/>
+            <path d="M4.5 12.5A.5.5 0 0 1 5 12h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5m0-2A.5.5 0 0 1 5 10h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5m1.639-3.708 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V8.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V8s1.54-1.274 1.639-1.208M6.25 6a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5"/>
+          </svg>
+          
+          </span>
+          <h4>Evidence</h4>
+          </div>
+          
+      <div class="latest-resources__content">
+        <h3>Open Procurement</h3>  <p>It allows creating networks of public spending on goods services used in defense in 28 EU countries...</p>  <button class="learn-more-btn">Learn more<i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+  </a>
+
+<!-- Card component two -->
+
+  <a href="#" class="latest-resources__card">
+      <div class="icon-and-title">
+      <span class="icon-three">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#FF5400" class="bi bi-check-lg" viewBox="0 0 16 16">
+          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
+        </svg> 
+        </span>
+        <h4>Best Practices</h4>
+        </div>
+      <div class="latest-resources__content">
+      <h3>Transparent Spending</h3>  <p>It allows creating networks of public spending on goods services used in defense in 28 EU countries...</p>  <button class="learn-more-btn">Learn more<i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </a>
+
+ 
+    </div>
+    <button>View all resources</button>
+  </div>
+  </section>
+
+
+<!-- Contact us Section -->
+
+<section class="contact">
+  <div class="inner-contact">
+    <h3>Contact Us</h3>
+    <p>If you have any further inquires, please let us know by filling <br> the form below</p>
+
+    <form class="contact-form">
+      <fieldset>
+        <div class="first-row">
+
+            <div class="contact-label__input">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first name" 
+            name="first-name" required>
+            </div>
+            <div class="contact-label__input">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last name" 
+            name="last-name" required>
+          </div>
+        </div>
+
+        <div class="first-row">
+          <div class="contact-label__inputTwo">
+          <label for="email">Email</label> 
+          <input type="email" id="email" name="email" required>
+        </div>
+        </div>
+
+        <div class="first-row">
+          <div class="contact-label__inputThree">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" rows="5" required></textarea>
+        </div>
+        </div>
+      </fieldset>
+    </form>
+    <button>Submit</button>
+  </div>
+</section>
+
+
+
   <!-- footer section -->
   <footer class="footer">
+
+  <!-- Footer Top section   -->
     <section class="footer__top">
       <span class="bg-image"></span>
       <div class="footer__logo" >
@@ -259,15 +436,17 @@
       </nav>
     </section>
 
-    <!-- Bottom section of footer -->
-    <section class="footer__bottom">
+ <!-- Bottom section of footer -->
+  <section class="footer__bottom">
       <span>Terms and Conditions</span>
       <div class="footer__blogo">
         <img src="/yipl-frontend-challenge/landing-page/images/lowerFooter.jpeg" height="55px" width="200px" alt="company logo">
-        
+        <a href="#">
         <i class="fa-solid fa-arrow-up"></i>
+      </a>
       </div>
-    </section>
+  </section>
+
  </footer>
  <script src="/yipl-frontend-challenge/landing-page/scripts/main.js"></script>
 </body>
